@@ -30,5 +30,7 @@ test('It should show the logout button if user logged in' , async () => {
 });
 
 afterEach(async () => {
-    await page.close();
+    try {
+        page && await page.close();
+    } catch(e) {}
 });
