@@ -3,7 +3,6 @@ const uuid = require('uuid');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 
-module.exports =  (name) => {
+module.exports =  () => {
   return new User({}).save();
-
 }
