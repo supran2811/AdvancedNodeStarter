@@ -12,7 +12,10 @@ cache:
     - node_modules
     - client/node_modules
 install:
-  - cat /home/travis/.npm/_logs/2019-09-12T02_45_24_222Z-debug.log
+  - npm install
+  - npm run build
+after_install:
+  - cat /home/travis/.npm/_logs/*-debug.log
 script:
   - nohup npm start &
   - sleep 3
