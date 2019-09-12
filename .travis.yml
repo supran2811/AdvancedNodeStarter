@@ -17,6 +17,9 @@ install:
 script:
   - nohup npm start &
   - sleep 3
+branches:
+  only:
+    - new-changes
 
 
 
