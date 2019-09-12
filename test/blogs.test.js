@@ -3,7 +3,7 @@ const Page = require('./helper/page');
 let page;
 beforeEach(async () => {
     page = await Page.build();
-    await page.goto('localhost:3000');
+    await page.goto('http://localhost:3000');
 });
 
 describe('When logged in' , async () => {

@@ -1,6 +1,7 @@
 const redis = require('redis');
+const keys = require('../config/keys');
 
-const client = redis.createClient('redis://localhost:6379');
+const client = redis.createClient(keys.redisUrl);
 
 const util = require('util');
 
