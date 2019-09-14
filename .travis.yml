@@ -13,10 +13,7 @@ cache:
     - client/node_modules
 install:
   - npm install
-  - cd client
-  - npm install
   - npm run build
-  - cd ..
 script:
   - nohup npm start &
   - sleep 3
