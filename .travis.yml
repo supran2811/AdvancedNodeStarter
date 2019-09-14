@@ -13,9 +13,10 @@ cache:
     - client/node_modules
 install:
   - npm install
+  - cd client
+  - npm install
   - npm run build
-after_install:
-  - cat /home/travis/.npm/_logs/*-debug.log
+  - cd ..
 script:
   - nohup npm start &
   - sleep 3
